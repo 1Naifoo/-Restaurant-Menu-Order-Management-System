@@ -1,73 +1,60 @@
-# Restaurant Menu and Order Management System 🍔📋
+# Restaurant Menu & Order Management System 🍔📋
 
-A command-line software solution developed in **C++** for a Data Structures project (CSEB3213) at **Universiti Tenaga Nasional (UNITEN)**. This system optimizes day-to-day restaurant workflows by providing administrative staff with efficient, programmatically structured tools to manage dynamic menus and process sequential customer orders.
+[cite_start]A high-performance command-line application developed in **C++** for the *Data Structures and Algorithms* (CSEB3213) course at **Universiti Tenaga Nasional (UNITEN)**[cite: 1973, 1975, 1977]. [cite_start]This system optimizes restaurant floor workflows by providing administrative staff with programmatically structured modules to manage dynamic menus and process incoming customer orders[cite: 1991, 1992].
 
-> 📁 **Note:** The complete codebase implementation (**`main.cpp`**) and the comprehensive project documentation (covering system design charts, responsibilities breakdown, and the functional logic flowchart) are available directly within this repository's files section.
+> 📁 **Repository Notice:** The full target codebase implementation (**`main.cpp`**) and the official technical systems report are fully available and hosted directly within this repository's root files section.
 
 ---
 
-## 🌟 Architecture & Core Modules
+## 🌟 Data Structures & Algorithmic Foundations
 
-The application utilizes core algorithmic paradigms and memory-efficient Standard Template Library (STL) data structures to deliver low-overhead data manipulation:
+To ensure minimal runtime overhead and reliable data manipulation, the system is engineered entirely around fundamental **Standard Template Library (STL)** structures and standard computer science algorithms:
 
-* **Dynamic Storage:** Built entirely around the **STL Vector** wrapper class to maintain contiguous, resizable elements for live menu item sets and internal order contents.
-* **FIFO Order Processing:** Implements an **STL Queue** structure to log, monitor, and process transactions sequentially in a precise First-In, First-Out manner.
-* **Optimized Data Search:** Integrates the **Binary Search** algorithm to handle lookup targets with low worst-case logarithmic runtime complexity, $O(\log n)$.
-* **Data Sorting Matrix:** Implements **Selection Sort** routines to arrange active vector structural properties systematically.
+* [cite_start]**Dynamic Storage Arrays (`std::vector`):** Utilized to maintain contiguous, easily resizable database records for live menu item tracking and individual customer order components[cite: 1999, 2007, 2017].
+* [cite_start]**Sequential FIFO Data Pipelines (`std::queue`):** Enforces a strict *First-In, First-Out* execution matrix to log, monitor, and clear customer transactions sequentially as they hit the kitchen queue[cite: 1999, 2017, 2020].
+* [cite_start]**Logarithmic Search Traversal ($O(\log n)$):** Integrates a pure **Binary Search** routine to quickly target specific item keys within the menu vector during deletion updates[cite: 2000, 2011].
+* [cite_start]**Data Sorting Engine:** Employs a **Selection Sort** algorithm to programmatically arrange active menu vectors by either identification tags or base pricing matrices[cite: 2000, 2003].
 
 ---
 
 ## 🛠️ System Modules
 
-The system is compartmentalized into eight distinct functional operational modules:
+[cite_start]The application architecture is cleanly decoupled into eight independent core modules[cite: 2001]:
 
-1.  **Display Menu:** Pulls from the central vector to display item IDs, names, and pricing logs. Supports toggling selection lists sorted cleanly either by unique ID numbers or raw base pricing values.
-2.  **Add Menu Item:** Appends incoming menu items dynamically into the target vector after validating unique user-defined ID tags, item names, and custom base pricing metrics.
-3.  **Delete Menu Item:** Queries the menu collection utilizing a high-efficiency binary search filter to pinpoint and purge old item entries via their unique identification code.
-4.  **Edit Menu Item:** Rewrites parameters directly inside the vector array to dynamically update active pricing or naming conventions for pre-existing items.
-5.  **Create Order:** Generates distinct sub-vectors containing targeted customer selections, computes item aggregation costs, and pushes the final order payload straight to the transaction queue.
-6.  **View Orders:** Sequentially reads active items pending processing inside the queue, explicitly itemizing all internal items along with total accumulated invoice receipts.
-7.  **Delete Order:** Removes the frontmost completed order block from the transaction queue, preserving standard sequential line rules.
-8.  **Edit Order:** Intercepts the primary order record at the head of the FIFO queue, allowing operators to instantly swap parameters out for a fresh set of selected items.
+### Menu Management
+1.  [cite_start]**Display Menu:** Accesses the active menu vector to output descriptive grids (ID, name, price)[cite: 2003, 2004]. [cite_start]Supports sorting toggles by Unique ID or Price point[cite: 2003].
+2.  [cite_start]**Add Menu Item:** Appends fresh elements to the menu array after verifying that the structural properties (Unique ID, name, price string) are valid[cite: 2005, 2006].
+3.  [cite_start]**Delete Menu Item:** Purges targeted nodes from the menu vector utilizing the high-efficiency binary search engine to locate records by ID[cite: 2010, 2011].
+4.  [cite_start]**Edit Menu Item:** Mutates pre-existing data pointers in place to quickly modify active item names or retail pricing details[cite: 2012, 2013].
 
----
-
-## ⚙️ Execution Architecture Flow
-[Start Application Initialization]
-│
-▼
-┌───────────────────────┐
-│ Declare Vector & Queue│
-│ Structure Collections │
-└───────────┬───────────┘
-│
-▼
-┌───────────────────────┐
-│  Render Control Menu  │ ◄──────────────────────┐
-│   Terminal Interface  │                        │
-└───────────┬───────────┘                        │
-│                                    │
-▼                                    │
-[Read Input Choice]                            │
-│                                    │
-┌────────┴────────┐                           │
-▼                 ▼                           │
-[Menu Options]   [Order Options]                    │
-├── View         ├── Create                        │
-├── Add          ├── View                          │
-├── Edit         ├── Edit                          │
-└── Delete       └── Process (Delete First)        │
-│                 │                           │
-└────────┬────────┘                           │
-│                                    │
-▼                                    │
-[Execute Routine Tasks]                         │
-│                                    │
-└────────────────────────────────────┘
-
+### Transaction Processing
+5.  [cite_start]**Create Order:** Generates a unique transaction ticket container (vector of items), automatically aggregates item costs, and pushes the completed block into the kitchen processing line[cite: 2015, 2016, 2017].
+6.  [cite_start]**View Orders:** Sequentially scans active items pending completion in the processing queue, printing distinct transaction lists alongside full invoice totals[cite: 2018, 2019].
+7.  [cite_start]**Delete Order:** Pops the frontmost completed transaction block out of the queue, systematically clearing the bottleneck while maintaining exact queue guidelines[cite: 2021, 2022].
+8.  [cite_start]**Edit Order:** Intercepts the primary order object currently occupying the front index of the queue, allowing staff to update its structural contents on the fly[cite: 2023, 2024].
 
 ---
 
-## 📊 Technical Capabilities & Foundations
-* **Relational Integrity:** Validates unique menu IDs to guarantee item identification matches across structural order blocks.
-* **Scale Potential:** The C++ abstract collection architecture serves as an optimal starting
+## 💻 Technical Specifications Matrix
+
+| Metric / Parameter | Implementation Detail | Operational Purpose |
+| :--- | :--- | :--- |
+| **Primary Language** | C++ (Standard ISO/IEC C++11 or higher) | Low-level memory management and raw execution speed. |
+| **Menu Collection Type** | `std::vector<MenuItem>` | Constant time $O(1)$ random access memory indexing loops. |
+| **Order Pipeline Type** | `std::queue<Order>` | Maintaining temporal chronological sequence for customer rows. |
+| **Search Complexity** | $O(\log n)$ (Binary Search) | Fast element pointer location inside long data arrays. |
+| **Data Integrity Rule** | Unique Entity Constraints | Validates unique menu IDs to protect data integrity across lists. |
+
+---
+
+## 🚀 Step-by-Step Compilation & Execution Guide
+
+To build and run this command-line tool on your local workstation, execute the following steps:
+
+### Prerequisites
+Ensure you have an active C++ compiler installed on your system path (e.g., **GCC/G++** or **Clang**).
+
+### Compilation Pipeline
+Open your terminal inside the project directory and run the standard compilation command:
+```bash
+g++ -std=c++11 main.cpp -o RestaurantSystem
