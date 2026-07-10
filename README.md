@@ -33,3 +33,41 @@ The system is compartmentalized into eight distinct functional operational modul
 ---
 
 ## ⚙️ Execution Architecture Flow
+[Start Application Initialization]
+│
+▼
+┌───────────────────────┐
+│ Declare Vector & Queue│
+│ Structure Collections │
+└───────────┬───────────┘
+│
+▼
+┌───────────────────────┐
+│  Render Control Menu  │ ◄──────────────────────┐
+│   Terminal Interface  │                        │
+└───────────┬───────────┘                        │
+│                                    │
+▼                                    │
+[Read Input Choice]                            │
+│                                    │
+┌────────┴────────┐                           │
+▼                 ▼                           │
+[Menu Options]   [Order Options]                    │
+├── View         ├── Create                        │
+├── Add          ├── View                          │
+├── Edit         ├── Edit                          │
+└── Delete       └── Process (Delete First)        │
+│                 │                           │
+└────────┬────────┘                           │
+│                                    │
+▼                                    │
+[Execute Routine Tasks]                         │
+│                                    │
+└────────────────────────────────────┘
+
+
+---
+
+## 📊 Technical Capabilities & Foundations
+* **Relational Integrity:** Validates unique menu IDs to guarantee item identification matches across structural order blocks.
+* **Scale Potential:** The C++ abstract collection architecture serves as an optimal starting
